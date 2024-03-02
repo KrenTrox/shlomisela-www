@@ -1,12 +1,23 @@
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiences, skills } from "../constants";
 import { CTA } from "../components/CTA";
+import { experiences, skills } from "../constants";
 
 export const About = () => {
+	useEffect(() => {
+		TagManager.dataLayer({
+			dataLayer: {
+				event: 'pageview',
+				page: 'about',
+			}
+		})
+	}, []);
+
 	return (
 		<section className="max-container">
 			<h1 className="head-text">

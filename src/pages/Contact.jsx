@@ -1,12 +1,13 @@
 import emailjs from '@emailjs/browser'
 import { Canvas } from '@react-three/fiber'
-import { Suspense, useRef, useState } from "react"
+import { Suspense, useEffect, useRef, useState } from "react"
+import TagManager from 'react-gtm-module'
 
 import { Loader } from '../components/Loader'
 
-import { Fox } from '../models/Fox'
-import { useAlert } from '../hooks/useAlert'
 import { Alert } from '../components/Alert'
+import { useAlert } from '../hooks/useAlert'
+import { Fox } from '../models/Fox'
 
 export const Contact = () => {
 	const formRef = useRef(null)
@@ -19,6 +20,15 @@ export const Contact = () => {
 	const [currentAnimation, setCurrentAnimation] = useState('idle')
 
 	const { alert, showAlert, hideAlert } = useAlert()
+
+	useEffect(() => {
+		TagManager.dataLayer({
+			dataLayer: {
+				event: 'pageview',
+				page: 'contact',
+			}
+		})
+	}, []);
 
 	const handleChange = (e) => {
 		setForm({

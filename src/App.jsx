@@ -1,6 +1,13 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { About, Contact, Home, Projects } from './pages';
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+  gtmId: import.meta.env.VITE_APP_GTM_ID
+}
+
+TagManager.initialize(tagManagerArgs)
 
 export const App = () => {
   return (

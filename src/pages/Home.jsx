@@ -1,14 +1,15 @@
 import { Canvas } from '@react-three/fiber'
-import { Suspense, useState, useEffect, useRef } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
+import TagManager from 'react-gtm-module'
+import { HomeInfo } from '../components/HomeInfo'
 import { Loader } from '../components/Loader'
 import { Bird } from '../models/Bird'
 import { Island } from '../models/Island'
 import { Plane } from '../models/Plane'
 import { Sky } from '../models/Sky'
-import { HomeInfo } from '../components/HomeInfo'
 
-import sakura from '../assets/sakura.mp3'
 import { soundoff, soundon } from '../assets/icons'
+import sakura from '../assets/sakura.mp3'
 
 export const Home = () => {
 	const audioRef = useRef(new Audio(sakura));
@@ -27,6 +28,15 @@ export const Home = () => {
 			audioRef.current.pause();
 		}
 	}, [isAudioPlaying]);
+
+	useEffect(() => {
+		TagManager.dataLayer({
+			dataLayer: {
+				event: 'pageview',
+				page: 'home',
+			}
+		})
+	}, []);
 
 	const adjustIslandForScreenSize = () => {
 		let screenScale = null;
