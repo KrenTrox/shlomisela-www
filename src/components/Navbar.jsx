@@ -11,6 +11,10 @@ export const Navbar = () => {
 					className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
 					About
 				</NavLink>
+				<NavLink to="https://blog.shlomisela.com?utm_source=portfolio&utm_medium=nav&utm_campaign=portfolio_nav"
+					className="text-black" target="_blank" rel="noopener noreferrer">
+					Blog
+				</NavLink>
 				{/* <NavLink to="/projects"
 					className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
 					Projects
