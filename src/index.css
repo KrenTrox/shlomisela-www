@@ -23,7 +23,7 @@ body:has(.card[data-color='green']:hover) {
 
 @layer utilities {
 	.max-container {
-		@apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+		@apply max-w-5xl mx-auto sm:p-16 pb-16 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
 	}
 
 	.head-text {
@@ -180,4 +180,17 @@ body:has(.card[data-color='green']:hover) {
 	border: #fff;
 	box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
 		0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+}
+
+.contra-hire-me-button {
+	position: fixed;
+	inset-block-end: 0.5rem;
+	inset-inline-end: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+	.contra-hire-me-button {
+		inset-inline-end: calc(50dvw - 6rem);
+		max-width: 12rem;
+	}
 }
