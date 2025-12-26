@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 pnpm-lock.yaml
 /.env
+.agent/rules/snyk_rules.md
