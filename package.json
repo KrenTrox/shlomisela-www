@@ -7,17 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "sync": "dotenv -- cross-var aws s3 sync ./dist/ $VITE_APP_AWS_S3_BUCKET_PATH",
-    "invalidate": "dotenv -- cross-var aws cloudfront create-invalidation --distribution-id $VITE_APP_AWS_CLOUDFRONT_DIST_ID --paths /*",
-    "deployment": "pnpm build && pnpm sync && pnpm invalidate"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
     "@react-spring/three": "^9.7.3",
     "@react-three/drei": "^9.99.3",
     "@react-three/fiber": "^8.15.16",
-    "cross-var": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-gtm-module": "^2.0.11",
