@@ -30,7 +30,7 @@ export const About = () => {
 
 			<div className='mt-5 flex flex-col gap-3 text-slate-500'>
 				<p>
-					Experienced Web Team Leader with a strong focus on Next.js and React, excelling in guiding development teams to create high-quality web solutions. <br /> Proficient in leveraging the capabilities of Next.js for server-side rendering and static site generation, paired with extensive expertise in crafting responsive, user-centric interfaces using React. <br /> Skilled in promoting effective teamwork, ensuring code quality, and adept at troubleshooting and problem-solving, contributing to continuous innovation and company growth.
+					Problem-Solving Frontend Tech Lead with a strong focus on Next.js and React, specializing in technology strategy and the development of new products. <br /> Proficient in leveraging the capabilities of Next.js for server-side rendering and static site generation, paired with extensive expertise in crafting responsive, user-centric interfaces. <br /> Deeply involved in frontend infrastructure and architectural excellence, ensuring high-quality, scalable web solutions that contribute to continuous innovation and company growth.
 				</p>
 			</div>
 

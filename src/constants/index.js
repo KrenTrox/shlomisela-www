@@ -23,7 +23,7 @@ import {
   threads,
   typescript,
 } from '../assets/icons';
-import { panda_trading_systems, theguy, paycom } from '../assets/images';
+import { panda_trading_systems, theguy, paycom, wiliot } from '../assets/images';
 
 export const skills = [
   {
@@ -136,10 +136,23 @@ export const skills = [
 export const experiences = [
   {
     title: 'Frontend Tech Lead',
+    company_name: 'Wiliot',
+    icon: wiliot,
+    iconBg: '#c3fdfd',
+    date: 'February 2025 - Present',
+    points: [
+      'Focusing on technology strategy and developing new products, ensuring cutting-edge solutions and seamless user experiences.',
+      'Actively involved in the frontend infrastructure guild, contributing to the standardisation and improvement of dev-tools and architectural patterns.',
+      'Guiding technical decisions and ensuring best practices in performance, security, and maintainability across new product initiatives.',
+      'Passionate about monitoring web application performance and delivering exceptional, scalable web solutions using React and Next.js.',
+    ],
+  },
+  {
+    title: 'Frontend Tech Lead',
     company_name: 'Pay.com',
     icon: paycom,
     iconBg: '#b2a7ff',
-    date: 'May 2024 - Present',
+    date: 'May 2024 - February 2025',
     points: [
       'Specialize in developing new Next.js applications, prioritizing modern, high-quality, and engaging user experiences.',
       'Conduct comprehensive code reviews, ensuring high standards in performance, security, and maintainability across all projects.',
